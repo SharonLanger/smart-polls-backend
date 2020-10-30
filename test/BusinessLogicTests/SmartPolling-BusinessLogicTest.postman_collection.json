@@ -1,0 +1,2884 @@
+{
+	"info": {
+		"_postman_id": "d0e1613a-8c41-4fb8-b82a-270c3bc53411",
+		"name": "TESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete DB",
+			"item": [
+				{
+					"name": "delete DB",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "701f5427-5819-471d-b2e0-538fa13944a8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/reset_db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"reset_db"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "insert users",
+			"item": [
+				{
+					"name": "insert user yoni",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cc124eb8-177b-4dc7-a74a-71a35caf8c62",
+								"exec": [
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ce99b5b3-8cb2-4cfa-9fb8-1b382793613a",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"yoni\", \"password\": \"yoni\", \"first_name\": \"Yoni\", \"last_name\": \"Banoni\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert user dan",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "38173120-0f23-46f5-885b-4274fa76fd83",
+								"exec": [
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d1495fc4-0e8e-4198-a753-d5a6a19ec508",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"dan\", \"password\": \"dan\", \"first_name\": \"Dan\", \"last_name\": \"Jojo\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert user lital",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "661b5b48-ce7d-49d7-8ad2-b09eb838b4e6",
+								"exec": [
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "297b6a1c-4a00-4933-84bb-755eac5a77a2",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"lital\", \"password\": \"lital\", \"first_name\": \"Lital\", \"last_name\": \"Cohen\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert user sharon",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f2785fa9-fe6a-48ec-98b6-e3bc1aae331b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4e215e04-d9d9-435a-8a56-284418d9b03b",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"sharon\", \"password\": \"sharon\", \"first_name\": \"Sharon\", \"last_name\": \"Langer\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert user benny",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "93a45ff8-fbd6-4a79-800f-00840cf93cc4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "1033bc60-d68e-4f8e-bc5b-c0f6518bac36",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"benny\", \"password\": \"benny\", \"first_name\": \"Benny\", \"last_name\": \"Kimelfeld\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update sharon telegram id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6401f2e9-c06b-48c2-bc3d-5f2239768c1a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "5ff871a9-031d-4189-a682-7c4961289bd1",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/insert_telegram_id?user_name=sharon&telegram_id=457922565",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"insert_telegram_id"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "sharon"
+								},
+								{
+									"key": "telegram_id",
+									"value": "457922565"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate users list size",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "edc793be-0b9a-48e5-8662-45fa628da11e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d9492d5a-521f-42f0-98ea-780a632f5715",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Total of 5 users\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(5);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"user\", \"attributes\":{\"user_name\": \"benny\", \"password\": \"benny\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate user sharon telegram id",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6b34d4b0-7734-4ccd-a823-2ab482c1714b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f8e592df-7bf3-49d8-96ad-cdd9968f2bb2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Sharon have telegram id defined\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"457922565\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Insert polls",
+			"item": [
+				{
+					"name": "insert poll 1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7f0dcd5a-ea61-43ae-9b3d-fe4a89171edf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "732941ca-e94b-464a-81d9-d6aae5f094d0",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"poll\", \"attributes\":{\"poll_question\":\"How is the first poll?\", \"poll_answers\":\"Good&Great&Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/polls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"polls"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert pol 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "285c3ef6-fe91-495e-a4ba-66db80bd23cc",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "be3f85b9-cf09-41cb-b874-978fddfecfd3",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"poll\", \"attributes\":{\"poll_question\":\"How is the seccond poll?\", \"poll_answers\":\"Good&Great&Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/polls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"polls"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert poll 3 for group=1:Like A Boss",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ff175294-0728-40da-b1e7-4a4f59a01fa5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d254fecc-7dc2-4f9f-9618-dc9bc126bdca",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"poll\", \"attributes\":{\"poll_question\":\"How is the group poll?\", \"poll_answers\":\"Good&Great&Like A Boss\", \"groups_id\":\"1:Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/polls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"polls"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test(get_poll_data) poll=1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7726d7b5-4769-44ff-b8e9-e6b8154ac138",
+								"exec": [
+									"// var dataInsert_json = {",
+									"//     \"inline_keyboard\": [",
+									"//         [{\"text\":\"Good\", \"callback_data\": \"poll_id=1234%26answer=1\"}],",
+									"//         [{\"text\":\"Great\", \"callback_data\": \"poll_id=1234%26answer=2\"}],",
+									"//         [{\"text\":\"Like A BOSS\", \"callback_data\": \"poll_id=1234%26answer=3\"}]",
+									"//     ]",
+									"// };",
+									"",
+									"// pm.environment.set(\"dataInsert\", JSON.stringify(dataInsert_json));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d9e003e9-67b1-4d01-9215-978c5f59a0ca",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body is correct\", function () {",
+									"    pm.response.to.have.body(\"[[\\\"column\\\", \\\"value\\\"], [\\\"Good\\\", 0], [\\\"Great\\\", 0], [\\\"Like A Boss\\\", 0]]\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_poll_data?poll_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_poll_data"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Insert answers",
+			"item": [
+				{
+					"name": "insert_answer_from_telegram sharon",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9582e8a6-eda3-4ffd-9f7c-5387ade606fc",
+								"exec": [
+									"// var dataInsert_json = {",
+									"//     \"inline_keyboard\": [",
+									"//         [{\"text\":\"Good\", \"callback_data\": \"poll_id=1234%26answer=1\"}],",
+									"//         [{\"text\":\"Great\", \"callback_data\": \"poll_id=1234%26answer=2\"}],",
+									"//         [{\"text\":\"Like A BOSS\", \"callback_data\": \"poll_id=1234%26answer=3\"}]",
+									"//     ]",
+									"// };",
+									"",
+									"// pm.environment.set(\"dataInsert\", JSON.stringify(dataInsert_json));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f7847d63-18e9-4f74-8484-9e9447d32b7c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/insert_answer_from_telegram?chat_id=457922565&answer=Good&poll_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"insert_answer_from_telegram"
+							],
+							"query": [
+								{
+									"key": "chat_id",
+									"value": "457922565"
+								},
+								{
+									"key": "answer",
+									"value": "Good"
+								},
+								{
+									"key": "poll_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert answer yoni",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ba7b5348-435c-44b4-bf3d-3cf14998793f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "6b299f30-caa9-443d-a7a9-511fbaea6b0d",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"answer\", \"attributes\":{\"poll_id\":1, \"user_name\":\"yoni\", \"answer\":\"Great\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/answers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"answers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upsert answer yoni",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9fc29c25-45e7-45ff-b914-20015e37c1ac",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "259019fa-b1d3-4a2c-b08b-963e20929188",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/insert_answer?answer=Like A Boss&user_name=yoni&poll_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"insert_answer"
+							],
+							"query": [
+								{
+									"key": "answer",
+									"value": "Like A Boss"
+								},
+								{
+									"key": "user_name",
+									"value": "yoni"
+								},
+								{
+									"key": "poll_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert answer dan",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "29956a44-d62a-41e3-bacc-e74d0334fdc0",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "78ea6e83-b10e-4e8e-8607-9921b3ed7d88",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"answer\", \"attributes\":{\"poll_id\":1, \"user_name\":\"dan\", \"answer\":\"Good\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/answers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"answers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert answer lital",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fead531a-9dcd-41f5-bd09-038cbc6aa346",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "6dfdbd3f-697d-49d8-9705-01f42b09d088",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"answer\", \"attributes\":{\"poll_id\":1, \"user_name\":\"lital\", \"answer\":\"Great\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/answers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"answers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert answer benny",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c1219ee4-b358-4419-8590-33bbadccf128",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "b35e578d-c147-4ce8-81b9-f8718d1d2893",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"answer\", \"attributes\":{\"poll_id\":1, \"user_name\":\"benny\", \"answer\":\"Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/answers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"answers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert answer yoni poll=2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "0cdea8d9-6d6c-4e65-adaa-e3044d127101",
+								"exec": [
+									"// var dataInsert_json = {",
+									"//     \"inline_keyboard\": [",
+									"//         [{\"text\":\"Good\", \"callback_data\": \"poll_id=1234%26answer=1\"}],",
+									"//         [{\"text\":\"Great\", \"callback_data\": \"poll_id=1234%26answer=2\"}],",
+									"//         [{\"text\":\"Like A BOSS\", \"callback_data\": \"poll_id=1234%26answer=3\"}]",
+									"//     ]",
+									"// };",
+									"",
+									"// pm.environment.set(\"dataInsert\", JSON.stringify(dataInsert_json));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "6446f3c2-0276-40b0-84bc-bed5db06b34b",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"answer\", \"attributes\":{\"poll_id\":2, \"user_name\":\"yoni\", \"answer\":\"Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/answer/answers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"answer",
+								"answers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate poll 1 answers",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a7e6be03-ec3e-4921-9487-6f55158c4e34",
+								"exec": [
+									"// var dataInsert_json = {",
+									"//     \"inline_keyboard\": [",
+									"//         [{\"text\":\"Good\", \"callback_data\": \"poll_id=1234%26answer=1\"}],",
+									"//         [{\"text\":\"Great\", \"callback_data\": \"poll_id=1234%26answer=2\"}],",
+									"//         [{\"text\":\"Like A BOSS\", \"callback_data\": \"poll_id=1234%26answer=3\"}]",
+									"//     ]",
+									"// };",
+									"",
+									"// pm.environment.set(\"dataInsert\", JSON.stringify(dataInsert_json));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2df2f0fa-ef5e-4752-ba23-0e2d1711f265",
+								"exec": [
+									"pm.test(\"Body is correct\", function () {",
+									"    pm.response.to.have.body(\"[[\\\"column\\\", \\\"value\\\"], [\\\"Good\\\", 2], [\\\"Great\\\", 1], [\\\"Like A Boss\\\", 2]]\");",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_poll_data?poll_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_poll_data"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Create groups",
+			"item": [
+				{
+					"name": "make_group: poll_id=1 answer=Like A Boss",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1780e8bd-4705-4996-9fdb-7115a76682aa",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "dbbff9d2-7274-47a6-a6e1-ab1951ea7cad",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/group/make_group?poll_id=1&answer=Like A Boss&name=first_group",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"group",
+								"make_group"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "1"
+								},
+								{
+									"key": "answer",
+									"value": "Like A Boss"
+								},
+								{
+									"key": "name",
+									"value": "first_group"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "make_group: poll_id=2 answer=Like A Boss",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8f6aeb1a-27e3-495f-af31-f0b3d00bc06b",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ebc0700b-505b-453d-a52b-2e4419c7ee4a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/group/make_group?poll_id=2&answer=Like A Boss&name=seccond_group",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"group",
+								"make_group"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "2"
+								},
+								{
+									"key": "answer",
+									"value": "Like A Boss"
+								},
+								{
+									"key": "name",
+									"value": "seccond_group"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_group_users(group='1:Like A Boss')",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c5f8e8fb-9408-47e0-8b23-21a081516795",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "77b65ff4-5921-404e-9c35-4e4ea0719f76",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"var json_data = JSON.parse('[\"yoni\", \"benny\"]')",
+									"",
+									"pm.test(\"verify group='1:Like A Boss' users:\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(json_data);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/group_users/get_group_users?group_id=1:Like A Boss",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"group_users",
+								"get_group_users"
+							],
+							"query": [
+								{
+									"key": "group_id",
+									"value": "1:Like A Boss"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_groups(user_name=benny)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3b4ab0be-3dbf-412b-9819-c593cb51fb2c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "1b6e0c6f-6481-48e5-9b0a-ebdcd0292f8e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"var json_data = JSON.parse('[\"1:Like A Boss\"]');",
+									"",
+									"pm.test(\"verify user:benny groups:\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(json_data);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/group_users/get_user_groups?user_name=benny",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"group_users",
+								"get_user_groups"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_groups(user_name=yoni)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3ff56385-87d9-4b68-99cc-0509ef9e05b9",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "c91b449a-5181-45ef-98d7-522a9e638231",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"var json_data = JSON.parse('[\"1:Like A Boss\",\"2:Like A Boss\"]');",
+									"",
+									"pm.test(\"verify user:yoni groups:\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql(json_data);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/group_users/get_user_groups?user_name=yoni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"group_users",
+								"get_user_groups"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "yoni"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Send poll to telegram",
+			"item": [
+				{
+					"name": "send poll to telegram users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "207c2221-301f-4070-8ad1-d28923a07417",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/poll/send_poll?poll_id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"send_poll"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Validate users&polls groups definition",
+			"item": [
+				{
+					"name": "get_user_polls sharon",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4bc4d8f3-cb85-4e97-a89d-e6910b917b11",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "a8584532-23d7-4a65-a697-b21925db4b82",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Size = 2\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(2);",
+									"});",
+									"",
+									"pm.test(\"Array[0] in poll ids\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].id).to.eql(1);",
+									"    pm.expect(jsonData[0].poll_question).to.eql(\"How is the first poll?\");",
+									"});",
+									"",
+									"pm.test(\"Array[1] in poll ids\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[1].id).to.eql(2);",
+									"    pm.expect(jsonData[1].poll_question).to.eql(\"How is the seccond poll?\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_user_polls?user_name=sharon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_user_polls"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "sharon"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_polls benny",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "dc30be07-e630-4bb5-87f8-e7c25c27ed1c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "4eae67db-4c1a-41fc-b867-284686130014",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Size = 3\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(3);",
+									"});",
+									"",
+									"pm.test(\"Array[0] in poll ids\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].id).to.eql(1);",
+									"    pm.expect(jsonData[0].poll_question).to.eql(\"How is the first poll?\");",
+									"});",
+									"",
+									"pm.test(\"Array[1] in poll ids\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[1].id).to.eql(2);",
+									"    pm.expect(jsonData[1].poll_question).to.eql(\"How is the seccond poll?\");",
+									"});",
+									"",
+									"pm.test(\"Array[2] in poll ids\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[2].id).to.eql(3);",
+									"    pm.expect(jsonData[2].poll_question).to.eql(\"How is the group poll?\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_user_polls?user_name=benny",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_user_polls"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get poll users. poll=3",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "99c6758b-9f31-4925-ada0-dd6de09b0fb2",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2c12b68a-7399-4fd0-949f-25d8fe88fd07",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"yoni is in the poll group\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"yoni\");",
+									"});",
+									"",
+									"pm.test(\"benny is in the poll group\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"benny\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_poll_users?poll_id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_poll_users"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "3"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get poll users. poll=1 should return all users",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "91f890fb-5c59-42ff-a18d-95da3268ef46",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "646bca0b-c157-403b-8a83-4ee555c3466d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response size is full\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(5);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_poll_users?poll_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_poll_users"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "1"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "New poll for 2 groups and validation",
+			"item": [
+				{
+					"name": "insert poll 4 for 2 groups but the total users is 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "340eb77f-5eaa-4aea-8d0e-50c7114bf646",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ac21ff18-51cf-4661-a9a2-5049b4cffa8f",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"poll\", \"attributes\":{\"poll_question\":\"How is the poll for 2 groups?\", \"poll_answers\":\"Good&Great&Like A Boss\", \"groups_id\":\"1:Like A Boss&2:Like A Boss\"}}}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/polls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"polls"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate poll=4 users should return 2 users",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d069379f-88f4-47ce-8af1-976e20ff514c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "dbf34b60-a1d8-4943-9d44-ed57fce36596",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response size is full\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(2);",
+									"});",
+									"",
+									"pm.test(\"yoni is in the poll group\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"yoni\");",
+									"});",
+									"",
+									"pm.test(\"benny is in the poll group\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"benny\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/poll/get_poll_users?poll_id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"poll",
+								"get_poll_users"
+							],
+							"query": [
+								{
+									"key": "poll_id",
+									"value": "4"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin validation",
+			"item": [
+				{
+					"name": "Insert system admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "29207fbf-14c5-4e79-8a0e-8e30a4eea1a4",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"admins"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert group admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b72ec4f3-9402-450a-bced-48272153bfa0",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"yoni\", \"id\": \"1:Like A Boss\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"admins"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate sys-admin is admin for groups",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "acbb37f2-bca2-4d0d-9cd4-67d155230d41",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Size is 1\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(2);",
+									"});",
+									"",
+									"pm.test(\"Benny is admin for all groups\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"benny\");",
+									"});",
+									"",
+									"pm.test(\"Yoni is admin the group\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"yoni\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/get_group_admins?group_id=1:Like A Boss",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"get_group_admins"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny",
+									"disabled": true
+								},
+								{
+									"key": "group_id",
+									"value": "1:Like A Boss"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate sys-admin is admin for group=0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0d94107f-8c0f-48c5-a1d6-53299be524af",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Size is 1\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(1);",
+									"});",
+									"",
+									"pm.test(\"Benny is sys-admin\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"benny\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/get_group_admins?group_id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"get_group_admins"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny",
+									"disabled": true
+								},
+								{
+									"key": "group_id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate sys-admin groups",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1fc8a6bf-ab70-4d74-98be-9f7617bb3496",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Size is 3\", function () {",
+									"    var jsonData = pm.response.json().length;",
+									"    pm.expect(jsonData).to.eql(3);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Array[0] in groups\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].id).to.eql(\"0\");",
+									"    pm.expect(jsonData[0].name).to.eql(\"ALL-SYS-USERS\");",
+									"});",
+									"",
+									"pm.test(\"Array[1] in groups\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[1].id).to.eql(\"1:Like A Boss\");",
+									"    pm.expect(jsonData[1].name).to.eql(\"first_group\");",
+									"});",
+									"",
+									"pm.test(\"Array[2] in groups\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[2].id).to.eql(\"2:Like A Boss\");",
+									"    pm.expect(jsonData[2].name).to.eql(\"seccond_group\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/get_user_admin_groups?user_name=benny",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"get_user_admin_groups"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny"
+								},
+								{
+									"key": "group_id",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate is benny the admin of group list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96249bc3-bc1d-4c83-a30d-ab9b7c49788d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Benny is the admin for all groups\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"true\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/is_user_name_admin_for_group_list?user_name=benny&groups_list=1:Like A Boss%262:Like A Boss",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"is_user_name_admin_for_group_list"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "benny"
+								},
+								{
+									"key": "groups_list",
+									"value": "1:Like A Boss&2:Like A Boss"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate is yoni the admin of group list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "95aa3a6b-e27f-48dd-b9db-f8d1fd65e8ba",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Yoni is not the admin of one of the groups\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"false\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\"data\":{\"type\":\"admin\", \"attributes\":{\"user_name\": \"benny\", \"id\": \"0\"}}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/is_user_name_admin_for_group_list?user_name=yoni&groups_list=1:Like A Boss%262:Like A Boss",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"is_user_name_admin_for_group_list"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "yoni"
+								},
+								{
+									"key": "groups_list",
+									"value": "1:Like A Boss%262:Like A Boss"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
