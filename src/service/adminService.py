@@ -85,15 +85,20 @@ class AdminService:
         Use this to check if a user is the admin of all the groups of a specific poll
 
         :param user_name: User under check
-        :param group_id: Group list under check
+        :param group_list: Group list under check
 
         :return:
             True: The user is an admin of the groups list
             False: The user is not an admin of the groups list
         """
+        if len(group_list) == 0:
+            return True
         if self.is_user_system_admin(user_name):
             return True
         for itr in group_list.split('&'):
+            print("user:" + user_name + ", Group: " + itr)
             if not self.check_if_user_is_admin(user_name, itr):
+                print("False")
                 return False
+        print("True")
         return True

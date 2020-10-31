@@ -49,7 +49,7 @@ class UserSchema(Schema):
 
     id = fields.Integer()
     # Telegram_id is the chat_id in the telegram-bot user metadata
-    telegram_id = fields.Integer()
+    telegram_id = fields.Str()
     user_name = fields.Str(required=True)
     password = fields.Str(required=True)
     first_name = fields.Str()
@@ -58,7 +58,7 @@ class UserSchema(Schema):
 
 
 class User(db.Model):
-    telegram_id = db.Column(db.Integer)
+    telegram_id = db.Column(db.String)
     user_name = db.Column(db.String, primary_key=True)
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)

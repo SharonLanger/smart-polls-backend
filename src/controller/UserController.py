@@ -61,11 +61,11 @@ def UserController(service, admin_service):
             return make_response(
                 "Could not update user telegram id\n"
                 "user_name: " + user_name + "\n"
-                                            "telegram_id: " + telegram_id, 500)
+                                            "telegram_id: " + str(telegram_id), 500)
         return make_response(
             "Update user telegram id\n"
             "user_name: " + user_name + "\n"
-                                        "telegram_id: " + telegram_id, 200)
+                                        "telegram_id: " + str(telegram_id), 200)
 
     @user_controller.route("/insert_user", methods=['POST'])
     def insert_user():

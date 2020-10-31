@@ -93,7 +93,7 @@ class UserService:
         :return:
             user_name of the user with chat_id
         """
-        user = self.table.query.filter_by(telegram_id=int(chat_id)).first()
+        user = self.table.query.filter_by(telegram_id=str(chat_id)).first()
         return user.user_name
 
     def get_chat_id_by_user_name(self, user_name):

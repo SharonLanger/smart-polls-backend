@@ -73,23 +73,4 @@ def AdminController(service, group_service):
             print(e)
             return make_response("", 500)
 
-    @admin_controller.route("/is_user_name_admin_for_group_list", methods=['GET'])
-    def is_user_name_admin_for_group_list():
-        """
-        Same as method <is_user_name_admin_for_group> but for a group list
-
-        :param user_name: User to check
-        :param groups_list: A list of group_id's concatenated with delimiter '&'
-
-        :return:
-            Same as method <is_user_name_admin_for_group>
-        """
-        try:
-            user_name = request.args.get('user_name')
-            groups_list = request.args.get('groups_list')
-            return make_response(jsonify(service.check_if_user_is_admin_for_group_list(user_name, groups_list)), 200)
-        except Exception as e:
-            print(e)
-            return make_response("", 500)
-
     return admin_controller

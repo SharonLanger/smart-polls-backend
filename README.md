@@ -1,8 +1,8 @@
 
-# Smart-polls-backend
+# Smart-polling-backend
 
 
-Smart-polls-backend need two things in order to work:
+Smart-polling-backend need two things in order to work:
 - Connection to your postgress DB
 - Telegram-bot TOKEN
 
