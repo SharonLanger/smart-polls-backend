@@ -1,12 +1,14 @@
 
-# Smart-polling-backend
+# Smart-polls-backend
 
+This is the first microservice you'll need to run but before you can run it you'll need 2 things.
 
-Smart-polling-backend need two things in order to work:
+Smart-polls-backend need two things in order to work:
 - Connection to your postgress DB
 - Telegram-bot TOKEN
 
 Both are updated in the properties file.
+So, first create a bot and DB.
 
 ### Connection to your postgress DB
 Create a new DB and just put the url like this:
